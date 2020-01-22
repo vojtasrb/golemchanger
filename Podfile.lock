@@ -1,0 +1,28 @@
+PODS:
+  - FGRoute (1.0.5)
+  - KeychainAccess (3.2.0)
+  - SwiftSocket (2.0.2)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - FGRoute
+  - KeychainAccess
+  - SwiftSocket
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FGRoute
+    - KeychainAccess
+    - SwiftSocket
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  FGRoute: 012077ebabb2841d2af3baf63b30e72841f35ba1
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: cb4e4d30cef24c2dacde037f6babf5ae8155690a
+
+COCOAPODS: 1.6.0

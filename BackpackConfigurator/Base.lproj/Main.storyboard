@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackpackConfigurator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2gW-6c-WF2">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1006"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SFK-Pm-dXS">
+                                    <size key="itemSize" width="90" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="BD6-TF-LgK" customClass="MyCollectionViewCell" customModule="BackpackConfigurator" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSi-jZ-9qe">
+                                                    <rect key="frame" x="0.0" y="19" width="60" height="21.000000000000014"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ZSi-jZ-9qe" firstAttribute="centerX" secondItem="BD6-TF-LgK" secondAttribute="centerX" id="EnK-bd-oDA"/>
+                                            <constraint firstItem="ZSi-jZ-9qe" firstAttribute="centerY" secondItem="BD6-TF-LgK" secondAttribute="centerY" id="J7L-4u-vta"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="myLabel" destination="ZSi-jZ-9qe" id="Kzx-bW-SIu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="G5O-4d-Q3G"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="b1O-j2-zzA"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdS-ZU-dq3" userLabel="GolemButton">
+                                <rect key="frame" x="30" y="1056" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="3On-l6-fAX"/>
+                                    <constraint firstAttribute="height" constant="150" id="5jY-5p-N5i"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Golem"/>
+                                <connections>
+                                    <action selector="changeToGolem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gcg-Od-vHS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zE-2i-Q3J" userLabel="SpiderButton">
+                                <rect key="frame" x="844" y="1056" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Q1y-eL-AzF"/>
+                                    <constraint firstAttribute="width" constant="150" id="UjG-vN-oZE"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Spider"/>
+                                <connections>
+                                    <action selector="changeToArachnoid:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="qOy-Jk-9YB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2gW-6c-WF2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CB5-WB-4vw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0zE-2i-Q3J" secondAttribute="trailing" constant="30" id="CeL-aD-OfQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2gW-6c-WF2" secondAttribute="trailing" id="EWy-e8-hsL"/>
+                            <constraint firstItem="tdS-ZU-dq3" firstAttribute="top" secondItem="2gW-6c-WF2" secondAttribute="bottom" constant="50" id="WhL-Vx-jKw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tdS-ZU-dq3" secondAttribute="bottom" constant="160" id="bZ5-UM-xJd"/>
+                            <constraint firstItem="tdS-ZU-dq3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nVT-bq-sok"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0zE-2i-Q3J" secondAttribute="bottom" constant="160" id="oj6-6i-Iiz"/>
+                            <constraint firstItem="2gW-6c-WF2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ptf-g8-RaT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ArachnoidButton" destination="0zE-2i-Q3J" id="lxs-pa-dWS"/>
+                        <outlet property="GolemButton" destination="tdS-ZU-dq3" id="Dca-Xi-g95"/>
+                        <outlet property="backpackCellView" destination="2gW-6c-WF2" id="SmF-gh-AKe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.6875" y="132.65007320644216"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Golem" width="512" height="512"/>
+        <image name="Spider" width="256" height="256"/>
+    </resources>
+</document>

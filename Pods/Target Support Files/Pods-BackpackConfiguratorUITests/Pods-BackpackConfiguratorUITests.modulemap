@@ -1,0 +1,6 @@
+framework module Pods_BackpackConfiguratorUITests {
+  umbrella header "Pods-BackpackConfiguratorUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
